@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 5000
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use('/.well-known/assetlinks.json', express.static(__dirname + '.well-known/assetlinks.json'))
   .use(express.static(path.join(__dirname, '.well-known')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
