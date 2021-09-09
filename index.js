@@ -1,8 +1,29 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-const assetlink = 'Test'
-const appleApplink = 'Apple Test'
+var fs = require('fs')
+var assetlink = 'Test'
+var appleApplink = 'Apple Test'
+
+
+function readJSONFile(filename, callback) {
+  fs.readFile(filename, function (err, data) {
+    if(err) {
+      callback(err);
+      return;
+    }
+    try {
+      callback(null, JSON.parse(data));
+    } catch(exception) {
+      callback(exception);
+    }
+  });
+}
+
+readJSONFile('.well-known/assetlinks.json', function (err, json) {
+  if(err) { throw err; }
+  assetlink = json;
+});
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
