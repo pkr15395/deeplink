@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "43DXND8Y2K.com.xamarin.deeplinking.pkr",
+                "paths": [ "/", "*", "/item*"]
+            }
+        ]
+    }
+}

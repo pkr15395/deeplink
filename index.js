@@ -25,6 +25,11 @@ readJSONFile('.well-known/assetlinks.json', function (err, json) {
   assetlink = json;
 });
 
+readJSONFile('.well-known/apple-app-site-association', function (err, json) {
+  if(err) { throw err; }
+  appleApplink = json;
+});
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
