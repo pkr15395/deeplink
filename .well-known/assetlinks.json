@@ -1,5 +1,5 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target" : { "namespace": "android_app", "package_name": "com.xamarin.deeplinking",
-               "sha256_cert_fingerprints": ["123456789"] }
+               "sha256_cert_fingerprints": ["D9:92:C6:8A:49:24:84:F5:8F:22:78:91:38:93:60:89:85:F4:5A:EB:03:D7:40:CA:0F:43:69:97:A2:6C:07:5F"] }
 }]
